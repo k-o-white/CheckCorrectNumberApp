@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     QObject::connect(ui->lineEdit, &QLineEdit::textEdited, [this](QString text)
     {
-       if (ui->lineEdit->text().isEmpty())
+       if (text.isEmpty())
            setStartLabel();
        else
        {
